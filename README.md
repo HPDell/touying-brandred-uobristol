@@ -12,6 +12,6 @@ typst init @preview/touying-uobristol
 
 ## Examples
 
-See [Examples](./examples/example.typ) and the [output](./examples/example.pdf) for more details.
+See the [examples](./examples/example.typ) and [output](./examples/example.pdf) for more details.
 
 Licensed under the [MIT License](LICENSE).
