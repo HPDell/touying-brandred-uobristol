@@ -55,7 +55,11 @@ jobs:
         working-directory: packages
         run: |
           PKG_BRANCH="feat/${{ env.BRANCH_NAME }}-$PKG_VERSION"
-          git switch -c $PKG_BRANCH
+          if [ -z `git branch -r | grep $PKG_BRANCH` ]; then
+            git switch -c $PKG_BRANCH
+          else
+            git switch $PKG_BRANCH
+          fi
           git pull --rebase
           mkdir -p packages/preview/${{ env.PACKAGE_NAME }}/$PKG_VERSION
           rsync -av \
