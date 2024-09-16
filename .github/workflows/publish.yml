@@ -56,7 +56,7 @@ jobs:
         run: |
           PKG_BRANCH="feat/${{ env.BRANCH_NAME }}-$PKG_VERSION"
           git switch -c $PKG_BRANCH
-          git pull ----rebase
+          git pull --rebase
           mkdir -p packages/preview/${{ env.PACKAGE_NAME }}/$PKG_VERSION
           rsync -av \
             --exclude=.git \
