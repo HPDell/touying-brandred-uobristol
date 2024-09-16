@@ -10,6 +10,7 @@ env:
   GIT_USER_EMAIL: huyg0180110559@outlook.com
   GIT_USER_NAME: HPDell
   PACKAGE_NAME: touying-brandred-uobristol
+  BRANCH_NAME: touying-uobristol
 
 jobs:
   build:
@@ -53,7 +54,7 @@ jobs:
       - name: Commit, merge and push
         working-directory: packages
         run: |
-          PKG_BRANCH="feat/${{ env.PACKAGE_NAME }}-$PKG_VERSION"
+          PKG_BRANCH="feat/${{ env.BRANCH_NAME }}-$PKG_VERSION"
           git switch -c $PKG_BRANCH
           mkdir -p packages/preview/${{ env.PACKAGE_NAME }}/$PKG_VERSION
           rsync -av \
