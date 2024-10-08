@@ -9,7 +9,8 @@ on:
 env:
   GIT_USER_EMAIL: huyg0180110559@outlook.com
   GIT_USER_NAME: HPDell
-  PACKAGE_NAME: touying-uobristol
+  PACKAGE_NAME: touying-brandred-uobristol
+  BRANCH_NAME: touying-uobristol
 
 jobs:
   build:
@@ -53,8 +54,13 @@ jobs:
       - name: Commit, merge and push
         working-directory: packages
         run: |
-          PKG_BRANCH="feat/${{ env.PACKAGE_NAME }}-$PKG_VERSION"
-          git switch -c $PKG_BRANCH
+          PKG_BRANCH="feat/${{ env.BRANCH_NAME }}-$PKG_VERSION"
+          if [ -z `git branch -r | grep $PKG_BRANCH` ]; then
+            git switch -c $PKG_BRANCH
+          else
+            git switch $PKG_BRANCH
+          fi
+          git pull --rebase
           mkdir -p packages/preview/${{ env.PACKAGE_NAME }}/$PKG_VERSION
           rsync -av \
             --exclude=.git \

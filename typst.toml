@@ -1,12 +1,11 @@
 [package]
-name = "touying-uobristol"
+name = "touying-brandred-uobristol"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["HPDell <huyg0180110559@outlook.com>"]
 license = "MIT"
 description = "Touying Slide Theme for University of Bristol"
-homepage = "https://github.com/HPDell/touying-uobristol"
-repository = "https://github.com/HPDell/touying-uobristol"
+repository = "https://github.com/HPDell/touying-brandred-uobristol"
 keywords = ["touying", "slide", "theme", "bristol", "university"]
 categories = ["presentation"]
 exclude = [".github/", "examples/", "README.md"]
@@ -14,4 +13,4 @@ exclude = [".github/", "examples/", "README.md"]
 [template]
 path = "template"
 entrypoint = "main.typ"
-thumbnail = "thumbnail.webp"
+thumbnail = "thumbnail.png"
