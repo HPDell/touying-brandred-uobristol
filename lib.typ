@@ -143,44 +143,25 @@
       rows: (auto, 1fr),
       pad(y: 2em, x: 2em, image("./uob-logo.svg", height: 2.4em)),
       block(width: 100%, height: 100%, {
-        set align(bottom)
-        grid(
-          columns: (1fr, auto),
-          block(
-            width: 100%,
-            height: 8cm,
-            inset: (x: 2em, top: 4em),
-            {
-              set align(left + horizon)
-              set text(16pt)
-              stack(
-                dir: ttb,
-                spacing: 8pt,
-                self.info.date.display(self.info.datetime-format),
-                self.info.institution
-              )
-            }
-          ),
-          polygon(
-            stroke: none,
-            fill: gray.transparentize(60%),
-            (0pt, 0pt),
-            (2cm, -8cm),
-            (14cm, -8cm),
-            (14cm, 0pt)
-          )
-        )
-        place(top + left, float: true, {
-          set text(fill: white)
-          place(top + left, polygon(
-            fill: self.colors.primary.transparentize(10%),
-            stroke: none,
-            (0cm, 0cm),
-            (0cm, 8cm),
-            (22cm, 8cm),
-            (24cm, 0cm)
-          ))
-          place(top + left, float: true, grid(
+        place(bottom + right, polygon(
+          stroke: none,
+          fill: gray.transparentize(60%),
+          (0pt, 0pt),
+          (2cm, -8cm),
+          (14cm, -8cm),
+          (14cm, 0pt)
+        ))
+        place(top + left, polygon(
+          fill: self.colors.primary.transparentize(10%),
+          stroke: none,
+          (0cm, 0cm),
+          (0cm, 8cm),
+          (22cm, 8cm),
+          (24cm, 0cm)
+        ))
+        place(top + left, {
+          set text(fill: self.colors.neutral-lightest)
+          grid(
             rows: (4cm, 4cm),
             columns: (24cm),
             block(inset: (x: 2em, y: 1em), width: 100%, height: 100%, {
@@ -193,8 +174,23 @@
               set text(size: 24pt)
               info.subtitle
             })
-          ))
+          )
         })
+        place(bottom + left, block(
+          width: 100%,
+          height: 8cm,
+          inset: (x: 2em, top: 4em),
+          {
+            set align(left + horizon)
+            set text(16pt)
+            stack(
+              dir: ttb,
+              spacing: 8pt,
+              self.info.date.display(self.datetime-format),
+              self.info.institution
+            )
+          }
+        ))
       })
     )
   }
