@@ -1,6 +1,6 @@
 [package]
 name = "touying-brandred-uobristol"
-version = "0.1.1"
+version = "0.1.2"
 entrypoint = "lib.typ"
 authors = ["HPDell <huyg0180110559@outlook.com>"]
 license = "MIT"
