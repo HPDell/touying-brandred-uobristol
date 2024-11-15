@@ -186,8 +186,10 @@
             stack(
               dir: ttb,
               spacing: 8pt,
+              text(size: 1.2em, self.info.author),
+              v(16pt),
+              emph(self.info.institution),
               self.info.date.display(self.datetime-format),
-              self.info.institution
             )
           }
         ))
