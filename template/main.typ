@@ -11,6 +11,9 @@
     date: datetime.today(),
     institution: [Institution],
   ),
+  config-common(
+    datetime-format: "[day] [month repr:short] [year]"
+  )
 )
 
 #title-slide()
