@@ -112,7 +112,8 @@
     show: setting
     body
   }
-  touying-slide(self: self, config: config, repeat: repeat, setting: new-setting, composer: multicolumns, ..bodies)
+  let composer = if composer == auto { multicolumns } else { composer }
+  touying-slide(self: self, config: config, repeat: repeat, setting: new-setting, composer: composer, ..bodies)
 })
 
 
