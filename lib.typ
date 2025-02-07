@@ -108,6 +108,7 @@
       text(fill: self.colors.primary, weight: "bold", sym.triangle.r.filled)
     })
     set table(stroke: self.colors.primary)
+    show: pad.with(y: 8pt)
     show: setting
     body
   }
