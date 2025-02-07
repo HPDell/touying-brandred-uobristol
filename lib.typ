@@ -66,7 +66,7 @@
     set align(horizon)
     set text(fill: self.colors.neutral-lightest, weight: "bold", size: 1.2em)
     if title != auto {
-      utils.fit-to-width.with(grow: false, 100%, title)
+      utils.fit-to-width(grow: false, 100%, title)
     } else {
       utils.call-or-display(self, self.store.header)
     }
