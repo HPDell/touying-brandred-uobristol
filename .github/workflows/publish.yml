@@ -5,6 +5,7 @@ on:
     branches: 
       - main
       - release-*
+      - release/*
 
 env:
   GIT_USER_EMAIL: huyg0180110559@outlook.com
