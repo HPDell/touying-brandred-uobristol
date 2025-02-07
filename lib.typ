@@ -411,7 +411,12 @@
     ),
     config-methods(
       init: (self: none, body) => {
-        set text(size: 20pt, font: "Lato")
+        let kwargs = args.named()
+        let font = if "font" in kwargs.keys() { kwargs.font } else { "Arial" }
+        let math-font = if "math-font" in kwargs.keys() { kwargs.math-font } else { "New Computer Modern Math" }
+        let text-size = if "text-size" in kwargs.keys() { kwargs.text-size } else { 20pt }
+        set text(size: text-size, font: font)
+        show math.equation: set text(font: math-font)
         show highlight: body => text(fill: self.colors.primary, strong(body.body))
         body
       },
