@@ -401,9 +401,9 @@
   show: touying-slides.with(
     config-page(
       paper: "presentation-" + aspect-ratio,
-      header-ascent: 30%,
+      header-ascent: 10%,
       footer-descent: 30%,
-      margin: (top: 3em, bottom: 1.5em, x: 2em),
+      margin: (top: 2.4em, bottom: 1.5em, x: 2em),
     ),
     config-common(
       slide-fn: slide,
