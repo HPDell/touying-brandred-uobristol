@@ -1,4 +1,5 @@
 #import "@preview/touying-brandred-uobristol:0.2.0": *
+#import callout: *
 
 #show: uobristol-theme.with(
   aspect-ratio: "16-9",
@@ -33,7 +34,7 @@ Headings of levels greater than $"slide level" + 1$ are shown as normal.
 
 The `highlight` is changed to show text like #highlight[this].
 
----
+#pagebreak()
 
 === Tables
 
@@ -47,6 +48,113 @@ The lines of tables are shown with the primary color.
   [Content], [Content], [Content],
   [Content], [Content], [Content],
 )
+
+== Callouts
+
+```typ
+#import "@preview/touying-brandred-uobristol:0.2.0": *
+#import callout: *
+```
+
+#grid(columns: 2, gutter: 1em, align: top)[
+  ```typ
+  #callout(title: lorem(2))[#lorem(10)]
+  ```
+  #callout(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #callout[#lorem(10)]
+  ```
+  #callout[#lorem(16)]
+]
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #tip(title: lorem(2))[#lorem(10)]
+  ```
+  #tip(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #tip[#lorem(10)]
+  ```
+  #tip[#lorem(16)]
+]
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #example(title: lorem(2))[#lorem(10)]
+  ```
+  #example(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #example-i[#lorem(10)]
+  ```
+  #example-i[#lorem(16)]
+]
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #important(title: lorem(2))[#lorem(10)]
+  ```
+  #important(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #important-i[#lorem(10)]
+  ```
+  #important-i[#lorem(16)]
+]
+
+#pagebreak()
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #warning(title: lorem(2))[#lorem(10)]
+  ```
+  #warning(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #warning-i[#lorem(10)]
+  ```
+  #warning-i[#lorem(16)]
+]
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #caution(title: lorem(2))[#lorem(10)]
+  ```
+  #caution(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #caution-i[#lorem(10)]
+  ```
+  #caution-i[#lorem(16)]
+]
+
+#pagebreak()
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #note(title: lorem(2))[#lorem(10)]
+  ```
+  #note(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #note-i[#lorem(10)]
+  ```
+  #note-i[#lorem(16)]
+]
+
+#grid(columns: 2, gutter: 1em)[
+  ```typ
+  #refer(title: lorem(2))[#lorem(10)]
+  ```
+  #refer(title: lorem(2))[#lorem(10)]
+][
+  ```typ
+  #refer-i[#lorem(10)]
+  ```
+  #refer-i[#lorem(16)]
+]
 
 == A long long long long long long long long long long long long long long long long long long long long long long long long Title
 
