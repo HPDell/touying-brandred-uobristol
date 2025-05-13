@@ -4,6 +4,8 @@
 // The code was revised by https://github.com/HPDell
 
 #import "@preview/touying:0.5.2": *
+#import "theme-color.typ": theme-color
+#import "callout.typ"
 
 /// Use to replace the default composer
 #let multicolumns(columns: auto, alignment: top, gutter: 1em, ..bodies) = {
@@ -429,9 +431,9 @@
       alert: utils.alert-with-primary-color
     ),
     config-colors(
-      neutral-lightest: rgb("#fafafa"),
-      primary: rgb("#ab1f2d"),
-      secondary: rgb("#ea6719")
+      neutral-lightest: theme-color.white,
+      primary: theme-color.red,
+      secondary: theme-color.orange,
     ),
     // save the variables for later use
     config-store(
@@ -449,3 +451,4 @@
   )
   body
 }
+
